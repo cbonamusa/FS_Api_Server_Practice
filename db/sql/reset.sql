@@ -10,9 +10,9 @@ CREATE TABLE forums (
 
 CREATE TABLE messages (
     message_id SERIAL PRIMARY KEY,
-    forum_id INTEGER  REFERECES forums(forum_id),
+    forum_id INTEGER  REFERENCES forums(forum_id),
     email VARCHAR(255),
     text TEXT,
     create_time TIMESTAMPF DEFAULT NOW(),
     last_modified TIMESTAMP
-)
+);
